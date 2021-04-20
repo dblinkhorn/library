@@ -8,6 +8,59 @@
   </head>
 
   <body>
+    <div class="container" id="container">
+      <header id="header">
+        <div class="newBookButtonContainer">
+          <button class="newBookButton" onclick="openNewBookForm()"><strong>Add Book</strong></button>
+        </div>
+      </header>
+      <div class="library" id="library">
+
+        <div class="book" id="book">
+          <ul class="attributes" id="attributes">
+            <li>Title: ${title}</li>
+            <li>Author: ${author}</li>
+            <li>Pages: ${pages}</li>
+            <li>Read: ${haveRead}</li>
+          </ul>
+          <div class="buttons" id="buttons">
+            <button type="button" class="read" id="read">Read</button>
+            <button type="button" class="remove" id="remove">Remove</button>
+          </div>
+        </div>
+
+        <div class="book" id="book">
+          <ul class="attributes" id="attributes">
+            <li>Title: ${title}</li>
+            <li>Author: ${author}</li>
+            <li>Pages: ${pages}</li>
+            <li>Read: ${haveRead}</li>
+          </ul>
+          <div class="buttons" id="buttons">
+            <button type="button" class="read" id="read">Read</button>
+            <button type="button" class="remove" id="remove">Remove</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- New Book Form -->
+    <div class="popupContainer" id="popupContainer">
+      <div class="newBookPopup" id="newBookPopup">
+        <form class="newBookForm" id="newBookForm">
+          <ul class="formList" id="formList">
+          <li><input id="title" type="text" placeholder="Book title" name="title"></li>
+          <li><input id="author"  type="text" placeholder="Author name" name="author"></li>
+          <li><input id="pages" type="text" placeholder="Number of pages" name="pages"></li>
+          <li><input type="checkbox" id="haveRead" name="haveRead" value="true"> Check if already read</li>
+          <li><input id ="send" type="submit"></li>
+        </ul>
+        </form>
+      </div>
+    </div>
+
+    <!-- End new book form -->
 
     <script src="main.js"></script>
   </body>

@@ -24,3 +24,15 @@ function displayBooks (library) {
         // write code to display each book on a card in the page
     });
 }
+
+let userTitle; // get all values from form
+let userAuthor;
+let userPages;
+let userRead;
+
+function openNewBookForm() {
+    document.getElementById("newBookPopup").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("newBookPopup").style.display = "none";
+  }
