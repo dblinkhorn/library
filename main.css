@@ -6,9 +6,9 @@
 html,
 body {
   box-sizing: border-box;
-  background-color: #333;
+  background-color: #888;
   font-family: sans-serif;
-  color: #FFF;
+  color: white;
 }
 
 .container {
@@ -34,19 +34,23 @@ header {
   grid-row: 2/3;
   display: flex;
   flex-direction: flex-start;
+  flex-wrap: wrap;
   align-items: flex-start;
   height: auto;
   border: 2px solid white;
   width: 80%;
 }
 
-.book {
+.bookCard {
   display: flex;
   flex-direction: column;
   background-color: #666;
-  border: 1px solid #FFF;
+  border: 1px solid white;
   padding: 30px;
   margin: 50px;
+  min-width: 300px;
+  min-height: 400px;
+  font-size: 1.5em;
 }
 
 ul {
@@ -62,17 +66,23 @@ ul {
 
 .newBookButtonContainer {
   display: flex;
-  justify-content: left;
+  justify-content: center;
+  align-items: center;
 }
 
 .newBookButton {
-  border: none;
-  border-radius: 5px;
-  background-color: #1c87c9;
+  border: 1px solid white;
+  background-color: #444;
   color: white;
   padding: 14px 20px;
   cursor: pointer;
-  position: fixed;
+  height: 75px;
+  width: 300px;
+  font-size: 2em;
+}
+
+.newBookButton:hover {
+  background-color: #666;
 }
 
 .popupContainer {
@@ -84,15 +94,15 @@ ul {
 .newBookPopup {
   display: none;
   position: fixed;
-  left: 30%;
-  top: 5%;
-  /* transform: translate(-50%, 5%); */
-  border: 2px solid #FFF;
+  left: 46%;
+  top: 30%;
+  border: 2px solid white;
   z-index: 9;
 }
 
 .newBookForm {
-  max-width: 300px;
+  max-width: 500px;
   padding: 20px;
   background-color: #777;
+  font-size: 2em;
 }
