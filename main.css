@@ -55,7 +55,7 @@ header {
 
 ul {
   list-style-type: none;
-  line-height: 30px;
+  line-height: 65px;
 }
 
 .buttons {
@@ -105,4 +105,12 @@ ul {
   padding: 20px;
   background-color: #777;
   font-size: 2em;
+}
+
+input[type=text] {
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  width: 400px;
+  box-sizing: border-box;
 }
