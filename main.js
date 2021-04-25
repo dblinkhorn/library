@@ -77,10 +77,12 @@ newBookForm.onsubmit = function createBookInstance(submit) {
     if (bookInstance.haveRead) {
       bookInstance.haveRead = false;
       cardToToggle.classList.remove("haveRead");
+      cardToToggle.classList.add("notRead");
       cardToToggle.textContent = "Not Read";
     } else {
       bookInstance.haveRead = true;
       cardToToggle.classList.add("haveRead");
+      cardToToggle.classList.remove("notRead");
       cardToToggle.textContent = "Read";
     }
   }
@@ -98,8 +100,8 @@ newBookForm.onsubmit = function createBookInstance(submit) {
 
 
     cardTitle.textContent = `${newBookInstance.title}`;
-    cardAuthor.textContent = `${newBookInstance.author}`;
-    cardPages.textContent = `${newBookInstance.numberOfPages}`;
+    cardAuthor.textContent = `By ${newBookInstance.author}`;
+    cardPages.textContent = `${newBookInstance.numberOfPages} pages`;
     removeBookButton.textContent = "Remove Book";
 
     if (newBookInstance.haveRead) {
@@ -107,7 +109,7 @@ newBookForm.onsubmit = function createBookInstance(submit) {
       toggleReadStatusButton.classList = "read haveRead";
     } else {
       toggleReadStatusButton.textContent = "Not Read";
-      toggleReadStatusButton.classList = "read";
+      toggleReadStatusButton.classList = "read notRead";
     }
 
     cardTitle.classList = "title attributes";
@@ -121,7 +123,7 @@ newBookForm.onsubmit = function createBookInstance(submit) {
     removeBookButton.id = `${index}`;
 
     toggleReadStatusButton.addEventListener("click", toggleReadStatus);
-    removeBookButton.addEventListener("click", removeBook);
+    removeBookButton.addEventListener("click", removeBook);+
 
     cardContainer.appendChild(cardTitle);
     cardContainer.appendChild(cardAuthor);

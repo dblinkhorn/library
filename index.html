@@ -10,9 +10,8 @@
   <body>
     <div class="container" id="container">
       <header id="header">
-        <div class="newBookButtonContainer">
-          <button class="newBookButton" id="newBookButton"><strong>Add New Book</strong></button>
-        </div>
+        <h1 id="pageTitle">My Library</h1>
+        <button class="plus" id="newBookButton">+</button>
       </header>
       <div class="library" id="library">
 
@@ -29,13 +28,13 @@
       <div class="newBookPopup" id="newBookPopup">
         <form class="newBookForm" id="newBookForm">
           <ul class="formList" id="formList">
-          <li><input id="title" type="text" placeholder="Book title" name="title"></li>
-          <li><input id="author"  type="text" placeholder="Author name" name="author"></li>
-          <li><input id="pages" type="text" placeholder="Number of pages" name="pages"></li>
+          <li><input id="title" type="text" placeholder="Book title" name="title" required></li>
+          <li><input id="author"  type="text" placeholder="Author name" name="author" required></li>
+          <li><input id="pages" type="number" placeholder="Number of pages" name="pages" min="1" max="99999" required></li>
           <li><input type="checkbox" id="checkRead"><label for="checkRead"> Read it?</label></li>
         </ul>
         <div class="buttons" id="formButtons">
-          <input class="button" id ="send" type="submit" value="Add Book">
+          <input class="button" id ="send" type="submit" value="Add Book" />
           <button type="button" class="cancel" id="cancel">Cancel</button>
         </div>
         </form>
